@@ -47,10 +47,10 @@ export default function DivinationSequence({ onComplete, sect, element }: Divina
     return lines;
   }, [sectLine, elementLine]);
 
-  const narrationDuration = narrationLines.length * 1200;
+  const narrationDuration = narrationLines.length * 900;
 
   useEffect(() => {
-    const brushEnd = 1800;
+    const brushEnd = 1200;
     const narrationEnd = brushEnd + (hasNarration ? narrationDuration + 400 : 0);
     const charsEnd = narrationEnd + 1400;
     const sealEnd = charsEnd + 1300;
@@ -93,13 +93,13 @@ export default function DivinationSequence({ onComplete, sect, element }: Divina
               {narrationLines.map((line, i) => (
                 <motion.p
                   key={line}
-                  className="font-serif-kr text-wuxia-parchment/60 text-lg text-center leading-relaxed"
-                  style={{ textShadow: '0 0 12px rgba(201,168,76,0.15)' }}
+                  className="font-serif-kr text-wuxia-parchment/70 text-xl md:text-2xl text-center leading-relaxed"
+                  style={{ textShadow: '0 0 15px rgba(201,168,76,0.2)' }}
                   initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
-                  animate={{ opacity: [0, 0.9, 0.9, 0], y: [10, 0, 0, -5], filter: ['blur(4px)', 'blur(0px)', 'blur(0px)', 'blur(2px)'] }}
+                  animate={{ opacity: [0, 1, 1, 0], y: [10, 0, 0, -5], filter: ['blur(4px)', 'blur(0px)', 'blur(0px)', 'blur(2px)'] }}
                   transition={{
-                    duration: 1.2,
-                    delay: i * 1.2,
+                    duration: 0.9,
+                    delay: i * 0.9,
                     times: [0, 0.2, 0.75, 1],
                     ease: 'easeInOut',
                   }}
