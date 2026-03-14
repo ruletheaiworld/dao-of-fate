@@ -63,7 +63,7 @@ export default function ResultContent() {
 
       {phase === 'summary' && fortune && (
         <div className="relative min-h-screen px-4 py-16">
-          <div className="absolute inset-0 bg-gradient-to-b from-wuxia-dark via-wuxia-ink/20 to-wuxia-dark" />
+          <div className="absolute inset-0 bg-gradient-to-b from-wuxia-dark via-wuxia-ink/20 to-wuxia-dark pointer-events-none" />
           <ParticleField count={20} />
 
           <div className="relative z-10 space-y-8">
